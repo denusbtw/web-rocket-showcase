@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM для digital-агенції</title>
+  <style>
+      body { font-family: Arial, sans-serif; margin:0; padding:0; background:#121018; color:#e0e0e0; }
+      header { background:#2e1a47; color:white; padding:30px 20px; text-align:center; }
+      h1 { margin:0; font-size:2em; }
+      main { max-width:900px; margin:30px auto; padding:0 20px; }
+      section { margin-bottom:40px; }
+      h2 { color:#a270ff; border-bottom:2px solid #a270ff; padding-bottom:5px; }
+      ul { list-style:none; padding:0; }
+      li { margin-bottom:10px; }
+      .screenshots { display:flex; flex-wrap:wrap; gap:10px; }
+      .screenshots img { width:100%; max-width:250px; border-radius:8px; cursor:pointer; box-shadow:0 2px 8px rgba(162,112,255,0.5); transition:0.2s; }
+      .screenshots img:hover { transform:scale(1.05); }
+      a.button { display:inline-block; padding:12px 20px; background:#a270ff; color:white; text-decoration:none; border-radius:6px; transition:0.2s; }
+      a.button:hover { background:#8b55ff; }
+      footer { text-align:center; padding:20px; font-size:0.9em; color:#999; }
+
+      /* Модальне вікно для галереї */
+      .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); }
+      .modal-content { margin:5% auto; display:block; max-width:90%; max-height:80%; border-radius:8px; }
+      .close { position:absolute; top:20px; right:40px; color:white; font-size:40px; font-weight:bold; cursor:pointer; transition:0.2s; }
+      .close:hover { color:#a270ff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CRM для digital-агенції</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Опис проєкту</h2>
+    <p>Внутрішня CRM-система для digital-агенції на Django з серверним рендерингом HTML-шаблонів. Побудована навколо ключових бізнес-сутностей: лідів, клієнтів і проєктів. Реалізовано конвертацію ліда в клієнта з автоматичним створенням проєкту.</p>
+  </section>
+
+  <section>
+    <h2>Функціонал</h2>
+    <ul>
+      <li><strong>Управління послугами та пакетами послуг</strong>
+        <ul>
+          <li>Додавання, редагування, видалення послуг і пакетів.</li>
+          <li>Призначення цін за країною користувача.</li>
+          <li>Встановлення відсоткових знижок на окремі послуги або пакети.</li>
+        </ul>
+      </li>
+      <li><strong>Управління лідами</strong>
+        <ul>
+          <li>Створення та редагування лідів.</li>
+          <li>Конвертація ліда в клієнта з автоматичним створенням проєкту.</li>
+          <li>Статуси лідів: новий, опрацьований, конвертований, програний.</li>
+          <li>Telegram-сповіщення при створенні нового ліда.</li>
+        </ul>
+      </li>
+      <li><strong>Управління клієнтами</strong>
+        <ul>
+          <li>Зберігання контактної інформації клієнтів.</li>
+          <li>Перегляд історії лідів і проєктів, пов’язаних з клієнтом.</li>
+          <li>Експорт списку клієнтів у CSV або Excel.</li>
+        </ul>
+      </li>
+      <li><strong>Управління проєктами</strong>
+        <ul>
+          <li>Створення і редагування проєктів.</li>
+          <li>Статуси проєктів: активний, завершений, скасований.</li>
+          <li>Прив’язка проєкту до клієнта і ліда.</li>
+          <li>Підрахунок прогресу проєкту та відстеження ключових метрик.</li>
+        </ul>
+      </li>
+      <li><strong>Аналітика та дашборди</strong>
+        <ul>
+          <li>Дашборд менеджера та адміністратора з ключовими показниками.</li>
+          <li>Кількість усіх, опрацьованих, конвертованих і програних лідів.</li>
+          <li>Кількість активних, завершених і скасованих проєктів.</li>
+          <li>Кругові діаграми для розподілу проєктів за статусами.</li>
+          <li>Лінійні графіки динаміки нових та конвертованих лідів за період.</li>
+        </ul>
+      </li>
+      <li><strong>Пошук і фільтрація</strong>
+        <ul>
+          <li>Пошук лідів, клієнтів і проєктів за ключовими полями.</li>
+          <li>Фільтрація за статусами, датами та іншими критеріями.</li>
+        </ul>
+      </li>
+      <li><strong>Експорт даних</strong>
+        <ul>
+          <li>Експорт клієнтів і проєктів у CSV/Excel для подальшої обробки.</li>
+        </ul>
+      </li>
+      <li><strong>Контент-модулі</strong>
+        <ul>
+          <li>Портфоліо агентства з можливістю додавати кейси.</li>
+          <li>Відгуки клієнтів.</li>
+          <li>Блог для публікацій новин і статей.</li>
+          <li>Форма зворотного зв’язку з автоматичним Telegram-сповіщенням.</li>
+        </ul>
+      </li>
+      <li><strong>Мультимовність</strong>
+        <ul>
+          <li>Українська, англійська, німецька.</li>
+          <li>Мова інтерфейсу і контенту обирається користувачем.</li>
+        </ul>
+      </li>
+      <li><strong>Автоматична корекція цін</strong>
+        <ul>
+          <li>Система розпізнає країну користувача і відображає скориговану ціну.</li>
+          <li>Враховуються валюта та можливі знижки.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Скріншоти</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="screenshots/crm_dashboard.png" alt="Дашборд">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/leads.png" alt="Список лідів">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/lead.png" alt="Лід">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/project.png" alt="Проєкт">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/services.png" alt="Список послуг">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/services_dashboard.png" alt="Популярність послуг">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/users_dashboard.png" alt="Аналітика">
+      </div>
+      <div class="gallery-item">
+        <img src="screenshots/telegram_message.png" alt="Повідомлення в телеграм">
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Модальне вікно -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<footer>
+  © 2026 Denis Rozum
+</footer>
+
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+    }
+    .gallery-item img {
+        width: 100%;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(162,112,255,0.5);
+        transition: transform 0.2s;
+    }
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+    }
+    .lightbox-content {
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 8px;
+    }
+    .close {
+        position: absolute;
+        top: 20px; right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .close:hover {
+        color: #a270ff;
+    }
+</style>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+    // Закриття по кліку поза зображенням
+    lightbox.addEventListener('click', e => {
+        if(e.target === lightbox) closeLightbox();
+    });
+</script>
+
+</body>
+</html>
