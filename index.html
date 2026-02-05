@@ -30,117 +30,128 @@
 <body>
 
 <header>
-  <h1>CRM для digital-агенції</h1>
+  <h1>CRM for Digital-agency</h1>
 </header>
 
 <main>
   <section>
-    <h2>Опис проєкту</h2>
-    <p>Внутрішня CRM-система для digital-агенції на Django з серверним рендерингом HTML-шаблонів. Побудована навколо ключових бізнес-сутностей: лідів, клієнтів і проєктів. Реалізовано конвертацію ліда в клієнта з автоматичним створенням проєкту.</p>
+    <h2>Project Description</h2>
+    <p>
+      Internal CRM system for a digital agency based on Django with server-side rendering of HTML templates. Built around key business entities: leads, customers, and projects. Implemented conversion of leads into customers with automatic project creation.
+    </p>
   </section>
 
   <section>
-    <h2>Функціонал</h2>
+    <h2>Functionality</h2>
     <ul>
-      <li><strong>Управління послугами та пакетами послуг</strong>
+      <li><strong>Service and service package management</strong>
         <ul>
-          <li>Додавання, редагування, видалення послуг і пакетів.</li>
-          <li>Призначення цін за країною користувача.</li>
-          <li>Встановлення відсоткових знижок на окремі послуги або пакети.</li>
+          <li>Adding, editing, and deleting services and packages.</li>
+          <li>Country-based pricing.</li>
+          <li>Setting percentage discounts for individual services or packages.</li>
         </ul>
       </li>
-      <li><strong>Управління лідами</strong>
+
+      <li><strong>Lead management</strong>
         <ul>
-          <li>Створення та редагування лідів.</li>
-          <li>Конвертація ліда в клієнта з автоматичним створенням проєкту.</li>
-          <li>Статуси лідів: новий, опрацьований, конвертований, програний.</li>
-          <li>Telegram-сповіщення при створенні нового ліда.</li>
+          <li>Creating and editing leads.</li>
+          <li>Converting a lead into a client with automatic project creation.</li>
+          <li>Lead statuses: new, in progress, converted, lost.</li>
+          <li>Telegram notifications when a new lead is created.</li>
         </ul>
       </li>
-      <li><strong>Управління клієнтами</strong>
+
+      <li><strong>Client management</strong>
         <ul>
-          <li>Зберігання контактної інформації клієнтів.</li>
-          <li>Перегляд історії лідів і проєктів, пов’язаних з клієнтом.</li>
-          <li>Експорт списку клієнтів у CSV або Excel.</li>
+          <li>Storing client contact information.</li>
+          <li>Viewing lead and project history related to a client.</li>
+          <li>Exporting the client list to CSV or Excel.</li>
         </ul>
       </li>
-      <li><strong>Управління проєктами</strong>
+
+      <li><strong>Project management</strong>
         <ul>
-          <li>Створення і редагування проєктів.</li>
-          <li>Статуси проєктів: активний, завершений, скасований.</li>
-          <li>Прив’язка проєкту до клієнта і ліда.</li>
-          <li>Підрахунок прогресу проєкту та відстеження ключових метрик.</li>
+          <li>Creating and editing projects.</li>
+          <li>Project statuses: active, completed, canceled.</li>
+          <li>Linking a project to a client and a lead.</li>
+          <li>Project progress calculation and tracking of key metrics.</li>
         </ul>
       </li>
-      <li><strong>Аналітика та дашборди</strong>
+
+      <li><strong>Analytics and dashboards</strong>
         <ul>
-          <li>Дашборд менеджера та адміністратора з ключовими показниками.</li>
-          <li>Кількість усіх, опрацьованих, конвертованих і програних лідів.</li>
-          <li>Кількість активних, завершених і скасованих проєктів.</li>
-          <li>Кругові діаграми для розподілу проєктів за статусами.</li>
-          <li>Лінійні графіки динаміки нових та конвертованих лідів за період.</li>
+          <li>Manager and administrator dashboards with key metrics.</li>
+          <li>Total, in-progress, converted, and lost leads.</li>
+          <li>Active, completed, and canceled projects.</li>
+          <li>Pie charts for project distribution by status.</li>
+          <li>Line charts showing the dynamics of new and converted leads over time.</li>
         </ul>
       </li>
-      <li><strong>Пошук і фільтрація</strong>
+
+      <li><strong>Search and filtering</strong>
         <ul>
-          <li>Пошук лідів, клієнтів і проєктів за ключовими полями.</li>
-          <li>Фільтрація за статусами, датами та іншими критеріями.</li>
+          <li>Searching leads, clients, and projects by key fields.</li>
+          <li>Filtering by statuses, dates, and other criteria.</li>
         </ul>
       </li>
-      <li><strong>Експорт даних</strong>
+
+      <li><strong>Data export</strong>
         <ul>
-          <li>Експорт клієнтів і проєктів у CSV/Excel для подальшої обробки.</li>
+          <li>Exporting clients and projects to CSV/Excel for further processing.</li>
         </ul>
       </li>
-      <li><strong>Контент-модулі</strong>
+
+      <li><strong>Content modules</strong>
         <ul>
-          <li>Портфоліо агентства з можливістю додавати кейси.</li>
-          <li>Відгуки клієнтів.</li>
-          <li>Блог для публікацій новин і статей.</li>
-          <li>Форма зворотного зв’язку з автоматичним Telegram-сповіщенням.</li>
+          <li>Agency portfolio with the ability to add case studies.</li>
+          <li>Client testimonials.</li>
+          <li>Blog for publishing news and articles.</li>
+          <li>Contact form with automatic Telegram notifications.</li>
         </ul>
       </li>
-      <li><strong>Мультимовність</strong>
+
+      <li><strong>Multilingual support</strong>
         <ul>
-          <li>Українська, англійська, німецька.</li>
-          <li>Мова інтерфейсу і контенту обирається користувачем.</li>
+          <li>Ukrainian, English, German.</li>
+          <li>Interface and content language can be selected by the user.</li>
         </ul>
       </li>
-      <li><strong>Автоматична корекція цін</strong>
+
+      <li><strong>Automatic price adjustment</strong>
         <ul>
-          <li>Система розпізнає країну користувача і відображає скориговану ціну.</li>
-          <li>Враховуються валюта та можливі знижки.</li>
+          <li>The system detects the user’s country and displays an adjusted price.</li>
+          <li>Currency and applicable discounts are taken into account.</li>
         </ul>
       </li>
     </ul>
   </section>
 
   <section>
-    <h2>Скріншоти</h2>
+    <h2>Screenshots</h2>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="screenshots/crm_dashboard.png" alt="Дашборд">
+        <img src="screenshots/crm_dashboard.png" alt="Dashboard">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/leads.png" alt="Список лідів">
+        <img src="screenshots/leads.png" alt="Lead list">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/lead.png" alt="Лід">
+        <img src="screenshots/lead.png" alt="Lead">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/project.png" alt="Проєкт">
+        <img src="screenshots/project.png" alt="Project">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/services.png" alt="Список послуг">
+        <img src="screenshots/services.png" alt="Service list">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/services_dashboard.png" alt="Популярність послуг">
+        <img src="screenshots/services_dashboard.png" alt="Popularity of services and packages">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/users_dashboard.png" alt="Аналітика">
+        <img src="screenshots/users_dashboard.png" alt="Analytics">
       </div>
       <div class="gallery-item">
-        <img src="screenshots/telegram_message.png" alt="Повідомлення в телеграм">
+        <img src="screenshots/telegram_message.png" alt="Notification in Telegram">
       </div>
     </div>
   </section>
@@ -153,7 +164,7 @@
 </div>
 
 <footer>
-  © 2026 Denis Rozum
+  © 2026 Denys Rozum
 </footer>
 
 <style>
